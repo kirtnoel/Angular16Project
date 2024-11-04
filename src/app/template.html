@@ -1,3 +1,13 @@
-<div class="bg-info text-white p-2">
-  Hello, World
+<div [ngClass]="'text-white p-2 ' + classes()" >
+  Hello, World.
+</div>
+
+<br/>
+
+<div ngClass="bg-success" >
+  Success
+</div>
+
+<div ngClass="bg-warning" >
+  Warning
 </div>
