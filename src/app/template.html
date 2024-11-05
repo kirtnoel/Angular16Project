@@ -2,15 +2,11 @@
   <div [class]="getClasses(0)">
       The first product is {{ products()[0].name }}
   </div>
-  <div [class]="getClasses(1)">
-      The second product is {{ products()[1].name }}
+  <div class="p-2"
+      [class.bg-success]="(products()[1].price ?? 0) < 50"
+      [class.bg-info]="(products()[1].price ?? 0) >= 50">
+          The second product is {{products()[1].name}}
   </div>
-  <div [class]="getClasses(0)">
-    The third product is {{ products()[2].name }}
-</div>
-<div [class]="getClasses(1)">
-    The fourth product is {{ products()[3].name }}
-</div>
 </div>
 
 
