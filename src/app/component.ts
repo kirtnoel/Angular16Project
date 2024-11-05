@@ -15,4 +15,9 @@ export class ProductComponent {
 
     classes = computed<string>(() =>
         this.count() == 5 ? "bg-success" : "bg-warning");
+
+    getClasses(key: number) {
+        return "p-2 " + (((this.products()[key].price ?? 0) > 50)
+            ? "bg-info" : "bg-warning");
+    }
 }
