@@ -20,4 +20,12 @@ export class ProductComponent {
         return "p-2 " + (((this.products()[key].price ?? 0) > 50)
             ? "bg-info" : "bg-warning");
     }
+
+    getClassMap(key: number): Object {
+        let product = this.products()[key];
+        return {
+            "text-center bg-danger": product.name == "Kayak",
+            "bg-info": (product.price ?? 0) < 50
+        };
+    }
 }
