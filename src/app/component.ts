@@ -34,5 +34,15 @@ export class ProductComponent {
     getKey(index: number, product: Product) {
       return product.name;
   }
+  // counter: number = 1;
+
+  get nextProduct(): Product | undefined {
+    this.removeProduct();
+    return this.products()[0];
+}
+
+getProductPrice(index: number): number {
+  return Math.floor(this.product(index)?.price ?? 0);
+}
 
 }
