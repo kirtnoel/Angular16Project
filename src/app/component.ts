@@ -30,4 +30,9 @@ export class ProductComponent {
             this.model.saveProduct( { ...p, id: 0 });
         }
     }
+
+    getKey(index: number, product: Product) {
+      return product.name;
+  }
+
 }
